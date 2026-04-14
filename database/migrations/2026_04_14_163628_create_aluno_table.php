@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // nome 'aluno' igual a table do aluno.php no Models
-        Schema::create('aluno', function (Blueprint $table) {
+        Schema::create('alunos', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->string('nome');
-            $table->string('email')->unique;
-            $table->string('telefone');
+            $table->string('email');
+            // $table->tipo da tabela (number,string,boolean) ('nome da tabela');
         });
     }
 
